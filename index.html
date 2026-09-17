@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&amp;family=Archivo:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds/modernist-67fe6145-d920-42be-adb0-d35d0be9be1b/styles.css">
+<script src="ds/modernist-67fe6145-d920-42be-adb0-d35d0be9be1b/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg,#f3f2f2); color: var(--color-text,#201e1d); font-family: "Heebo", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: var(--color-text,#201e1d); text-decoration: none; }
+  a:hover { color: #ae1800; }
+  ::selection { background: #ffc4b8; color: var(--color-text,#201e1d); }
+  input, textarea, button { font-family: inherit; }
+  input:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--color-accent,#ec3013); outline-offset: 2px; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Archivo', 'Heebo', system-ui, sans-serif; }
+  @keyframes nisaniCue { 0%, 100% { transform: translateY(0); opacity: .55 } 50% { transform: translateY(8px); opacity: 1 } }
+</style>
+</helmet>
+
+<div dir="rtl" style="background:var(--color-bg,#f3f2f2); overflow-x:clip">
+
+  <header style="position:sticky; top:0; z-index:40; display:flex; align-items:stretch; justify-content:space-between; gap:24px; background:var(--color-bg,#f3f2f2); border-bottom:2px solid var(--color-text,#201e1d)">
+    <a href="#top" style="display:flex; align-items:center; gap:14px; padding:18px 24px; border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+      <span style="font-weight:900; font-size:22px; letter-spacing:-.02em">ניסני</span>
+      <span style="font-family:'Archivo',sans-serif; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#605d5d">Goldsmith · Est. 1996</span>
+    </a>
+    <nav style="display:flex; align-items:stretch">
+      <a href="#studio" style="display:flex; align-items:center; padding:18px 22px; font-size:14px; font-weight:500; border-right:2px solid var(--color-divider,rgba(32,30,29,.4))" style-hover="background:var(--color-surface,#eae9e9)">הסטודיו</a>
+      <a href="#gallery" style="display:flex; align-items:center; padding:18px 22px; font-size:14px; font-weight:500; border-right:2px solid var(--color-divider,rgba(32,30,29,.4))" style-hover="background:var(--color-surface,#eae9e9)">הגלריה</a>
+      <a href="#consult" style="display:flex; align-items:center; padding:18px 26px; font-size:14px; font-weight:700; color:var(--color-bg,#f3f2f2); background:var(--color-accent,#ec3013)" style-hover="background:var(--color-accent-600,#dd2b0f)">ייעוץ עיצוב</a>
+    </nav>
+  </header>
+
+  <section id="top" style="position:relative; min-height:calc(100svh - 62px); background:var(--color-text,#201e1d); display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden">
+    <video data-video-slot="1" src="uploads/v1.mp4" autoplay="{{ yes }}" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="auto" ref="{{ videoRef }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover"></video>
+    <div style="position:absolute; inset:0; background:linear-gradient(to top,rgba(32,30,29,.96) 0%,rgba(32,30,29,.9) 38%,rgba(32,30,29,.55) 70%,rgba(32,30,29,.6) 100%)"></div>
+    <div style="position:relative; padding:0 24px 56px; max-width:1100px">
+      <span style="display:block; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--color-accent-300,#ff9783); margin-bottom:24px">The Workshop Floor</span>
+      <h1 style="margin:0; font-size:clamp(40px,7.2vw,104px); line-height:.96; font-weight:900; letter-spacing:-.035em; color:var(--color-bg,#f3f2f2); text-wrap:balance">האש עוד<br>זוכרת את השם</h1>
+      <p style="margin:28px 0 0; max-width:46ch; font-size:clamp(15px,1.5vw,19px); line-height:1.6; color:var(--color-bg,#f3f2f2); font-weight:300">כל תכשיט כאן נולד פעם אחת בלבד. קו על נייר, מתכת באש, ושם אחד שנחרט ביד — לא בתבנית.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:2px; margin-top:40px">
+        <a href="#studio" style="padding:18px 30px; background:var(--color-accent,#ec3013); color:var(--color-bg,#f3f2f2); font-size:15px; font-weight:700" style-hover="background:var(--color-accent-600,#dd2b0f)">להיכנס לסטודיו</a>
+        <a href="#gallery" style="padding:18px 30px; background:transparent; color:var(--color-bg,#f3f2f2); font-size:15px; font-weight:500; border:2px solid rgba(243,242,242,.4)" style-hover="background:rgba(243,242,242,.08)">לראות תכשיטים</a>
+      </div>
+    </div>
+    <div style="position:absolute; bottom:20px; left:24px; display:flex; flex-direction:column; align-items:center; gap:8px; animation:nisaniCue 2.6s ease-in-out infinite">
+      <span style="font-family:'Archivo',sans-serif; font-size:10px; letter-spacing:.2em; color:#9b9797">SCROLL</span>
+      <span style="width:2px; height:36px; background:var(--color-accent,#ec3013)"></span>
+    </div>
+  </section>
+
+  <section style="border-bottom:2px solid var(--color-text,#201e1d); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+    <div style="padding:56px 24px; border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+      <span style="font-family:'Archivo',sans-serif; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--color-accent,#ec3013)">01 · היד</span>
+      <p style="margin:18px 0 0; font-size:17px; line-height:1.65; font-weight:300">אין מכונה ואין הדפסה. פצירה, מסור וכוח יד — מהקו הראשון ועד הליטוש האחרון.</p>
+    </div>
+    <div style="padding:56px 24px; border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+      <span style="font-family:'Archivo',sans-serif; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--color-accent,#ec3013)">02 · השם</span>
+      <p style="margin:18px 0 0; font-size:17px; line-height:1.65; font-weight:300">השם הוא המבנה, לא הקישוט. האותיות נחתכות מהמתכת ומחזיקות את התכשיט.</p>
+    </div>
+    <div style="padding:56px 24px">
+      <span style="font-family:'Archivo',sans-serif; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--color-accent,#ec3013)">03 · זמן</span>
+      <p style="margin:18px 0 0; font-size:17px; line-height:1.65; font-weight:300">שבעה שלבים, בין שבועיים לשישה שבועות. הזמן הזה הוא חלק מהתכשיט.</p>
+    </div>
+  </section>
+
+  <section id="studio" style="border-bottom:2px solid var(--color-text,#201e1d)">
+    <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px; padding:72px 24px 40px">
+      <div>
+        <span style="display:block; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--color-accent,#ec3013); margin-bottom:18px">Inside The Studio</span>
+        <h2 style="margin:0; font-size:clamp(32px,5vw,68px); line-height:1.02; font-weight:900; letter-spacing:-.03em">שבעה שלבים<br>עד שהשם נושם</h2>
+      </div>
+      <p style="margin:0; max-width:38ch; font-size:16px; line-height:1.65; font-weight:300; color:#444141">גלול למטה. כל שלב הוא רגע אחד בשולחן העבודה, בסדר שבו הוא קורה באמת.</p>
+    </div>
+
+    <div style="position:relative; border-top:2px solid var(--color-text,#201e1d)">
+      <nav data-chapter-index="1" style="position:sticky; top:62px; z-index:20; display:flex; gap:0; background:var(--color-bg,#f3f2f2); border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4)); overflow-x:auto">
+        <a data-chip="0" href="#stage-0" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; border-left:2px solid rgba(32,30,29,.15); white-space:nowrap">01 סקיצה</a>
+        <a data-chip="1" href="#stage-1" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; border-left:2px solid rgba(32,30,29,.15); white-space:nowrap">02 ניסור</a>
+        <a data-chip="2" href="#stage-2" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; border-left:2px solid rgba(32,30,29,.15); white-space:nowrap">03 חישול</a>
+        <a data-chip="3" href="#stage-3" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; border-left:2px solid rgba(32,30,29,.15); white-space:nowrap">04 שיוף</a>
+        <a data-chip="4" href="#stage-4" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; border-left:2px solid rgba(32,30,29,.15); white-space:nowrap">05 פצירה</a>
+        <a data-chip="5" href="#stage-5" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; border-left:2px solid rgba(32,30,29,.15); white-space:nowrap">06 ליטוש</a>
+        <a data-chip="6" href="#stage-7" style="flex:1 0 auto; padding:14px 18px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#7d7979; white-space:nowrap">07 מוכן</a>
+      </nav>
+
+      <div data-scrolly="1" style="position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); border-bottom:2px solid var(--color-text,#201e1d)">
+
+        <div data-scrolly-media="1" style="position:sticky; top:106px; align-self:start; height:calc(100svh - 106px); overflow:hidden; background:#1a1918; border-left:2px solid var(--color-text,#201e1d)">
+          <div data-frame="0" class="grayscale" style="position:absolute; inset:0; opacity:1; transform:scale(1); transition:opacity .75s cubic-bezier(.16,.84,.3,1), transform 1.6s cubic-bezier(.16,.84,.3,1)">
+            <video data-scrolly-video="1" data-video-slot="2" src="uploads/v2.mp4" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="auto" ref="{{ videoRef }}" style="width:100%; height:100%; object-fit:cover"></video>
+          </div>
+          <div data-frame="1" class="grayscale" style="position:absolute; inset:0; opacity:0; transform:scale(1.07); transition:opacity .75s cubic-bezier(.16,.84,.3,1), transform 1.6s cubic-bezier(.16,.84,.3,1)">
+            <video data-scrolly-video="1" data-video-slot="3" src="uploads/v3.mp4" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="metadata" ref="{{ videoRef }}" style="width:100%; height:100%; object-fit:cover"></video>
+          </div>
+          <div data-frame="2" style="position:absolute; inset:0; opacity:0; transform:scale(1.07); transition:opacity .75s cubic-bezier(.16,.84,.3,1), transform 1.6s cubic-bezier(.16,.84,.3,1)">
+            <video data-scrolly-video="1" data-video-slot="4" src="uploads/v4.mp4" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="metadata" ref="{{ videoRef }}" style="width:100%; height:100%; object-fit:cover"></video>
+          </div>
+          <div data-frame="3" class="grayscale" style="position:absolute; inset:0; opacity:0; transform:scale(1.07); transition:opacity .75s cubic-bezier(.16,.84,.3,1), transform 1.6s cubic-bezier(.16,.84,.3,1)">
+            <video data-scrolly-video="1" data-video-slot="5" src="uploads/v5.mp4" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="metadata" ref="{{ videoRef }}" style="width:100%; height:100%; object-fit:cover"></video>
+          </div>
+          <div data-frame="4" class="grayscale" style="position:absolute; inset:0; opacity:0; transform:scale(1.07); transition:opacity .75s cubic-bezier(.16,.84,.3,1), transform 1.6s cubic-bezier(.16,.84,.3,1)">
+            <video data-scrolly-video="1" data-video-slot="6" src="uploads/v6.mp4" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="metadata" ref="{{ videoRef }}" style="width:100%; height:100%; object-fit:cover"></video>
+          </div>
+          <div data-frame="5" class="grayscale" style="position:absolute; inset:0; opacity:0; transform:scale(1.07); transition:opacity .75s cubic-bezier(.16,.84,.3,1), transform 1.6s cubic-bezier(.16,.84,.3,1)">
+            <video data-scrolly-video="1" data-video-slot="7" src="uploads/v7.mp4" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="metadata" ref="{{ videoRef }}" style="width:100%; height:100%; object-fit:cover"></video>
+          </div>
+
+          <div style="position:absolute; inset:auto 0 0 0; padding:20px 22px; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; background:linear-gradient(to top,rgba(26,25,24,.92),rgba(26,25,24,0))">
+            <span data-scrolly-tool="1" style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#bab6b6">TOOL — PENCIL 2B, TRACING PAPER</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.18em; color:#f3f2f2; white-space:nowrap"><span data-scrolly-num="1">01</span> / 06</span>
+          </div>
+          <div style="position:absolute; top:0; bottom:0; left:0; width:3px; background:rgba(243,242,242,.16)">
+            <div data-scrolly-bar="1" style="width:100%; height:0%; background:var(--color-accent,#ec3013); transition:height .4s linear"></div>
+          </div>
+        </div>
+
+        <div data-scrolly-steps="1">
+          <article data-stage="0" data-step="0" id="stage-0" style="min-height:calc(100svh - 106px); display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(40px,6vw,88px) 24px; border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4))">
+            <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:#d7d3d3">01</span>
+            <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em">רישום סקיצה</h3>
+            <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">הפגישה מתחילה בעיפרון. אני מקשיב לשם, לאורך שלו, לאותיות שקשה לכופף — ומצייר שלוש גרסאות עד שאחת מהן מרגישה כמו התכשיט.</p>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#7d7979">TOOL — PENCIL 2B, TRACING PAPER</span>
+          </article>
+          <article data-stage="1" data-step="1" id="stage-1" style="min-height:calc(100svh - 106px); display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(40px,6vw,88px) 24px; border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4))">
+            <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:#d7d3d3">02</span>
+            <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em">ניסור אותיות</h3>
+            <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">הסקיצה עוברת אל לוח הזהב. משור בעובי 0.2 מ״מ חותך את קווי האות — מהלך אחד לא מדויק והלוח נפסל. זה השלב שבו השם הופך לחומר.</p>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#7d7979">TOOL — JEWELLER’S SAW 4/0</span>
+          </article>
+          <article data-stage="2" data-step="2" id="stage-2" style="min-height:calc(100svh - 106px); display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(40px,6vw,88px) 24px; border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4))">
+            <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:var(--color-accent-300,#ff9783)">03</span>
+            <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em">חישול באש</h3>
+            <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">אחרי הניסור המתכת קשה ומתפצלת. הלהבה מחזירה לה רכות — 650 מעלות, שנייה אחת יותר והזהב נשרף.</p>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#7d7979">TOOL — TORCH · 650°C</span>
+          </article>
+          <article data-stage="3" data-step="3" id="stage-3" style="min-height:calc(100svh - 106px); display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(40px,6vw,88px) 24px; border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4))">
+            <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:#d7d3d3">04</span>
+            <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em">שיוף</h3>
+            <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">הגלגל מוריד את מה שמיותר. עובי האות נקבע כאן, בעשיריות המילימטר — דק מדי ישבר, עבה מדי יאבד את הקו של הכתיבה.</p>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#7d7979">TOOL — GRINDING WHEEL</span>
+          </article>
+          <article data-stage="4" data-step="4" id="stage-4" style="min-height:calc(100svh - 106px); display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(40px,6vw,88px) 24px; border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4))">
+            <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:#d7d3d3">05</span>
+            <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em">פצירה</h3>
+            <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">השלב הארוך והשקט. פצירה ביד מיישרת כל פנייה של האות, עד שהאצבע עוברת על המתכת ולא מרגישה כלום.</p>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#7d7979">TOOL — HAND FILES · 3 GRADES</span>
+          </article>
+          <article data-stage="5" data-step="5" id="stage-5" style="min-height:calc(100svh - 106px); display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(40px,6vw,88px) 24px">
+            <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:#d7d3d3">06</span>
+            <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em">ליטוש</h3>
+            <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">משחת ליטוש ובד רך. תוך שניות המתכת האפורה מחזירה אור — זה הרגע שבו התכשיט מפסיק להיות חומר גלם.</p>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#7d7979">TOOL — POLISHING MOP · ROUGE</span>
+          </article>
+        </div>
+      </div>
+
+      <article data-stage="6" id="stage-7" style="position:relative; min-height:88svh; background:var(--color-text,#201e1d); display:flex; align-items:flex-end; overflow:hidden">
+        <video data-video-slot="9" src="uploads/v8.mp4" autoplay="{{ yes }}" muted="{{ yes }}" loop="{{ yes }}" playsinline="{{ yes }}" preload="none" ref="{{ videoRef }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:grayscale(1)"></video>
+        <div style="position:absolute; inset:0; background:linear-gradient(to top,rgba(32,30,29,.92) 0%,rgba(32,30,29,.45) 55%,rgba(32,30,29,.25) 100%)"></div>
+        <div style="position:relative; padding:clamp(32px,5vw,72px) 24px; display:flex; flex-direction:column; gap:20px; background:linear-gradient(to top,rgba(32,30,29,.94),rgba(32,30,29,0))">
+          <span style="font-family:'Archivo',sans-serif; font-size:clamp(44px,6vw,80px); font-weight:800; line-height:.9; color:#9b9797">07</span>
+          <h3 style="margin:0; font-size:clamp(26px,3.2vw,40px); font-weight:900; letter-spacing:-.02em; color:var(--color-bg,#f3f2f2)">התכשיט המוכן</h3>
+          <p style="margin:0; max-width:44ch; font-size:17px; line-height:1.7; font-weight:300; color:#d7d3d3">בקופסה, עם הסקיצה המקורית שממנה הוא נולד. מי שמקבל אותו מקבל גם את הקו הראשון.</p>
+          <a href="#consult" style="align-self:flex-start; padding:16px 28px; background:var(--color-accent,#ec3013); color:var(--color-bg,#f3f2f2); font-weight:700; font-size:15px" style-hover="background:var(--color-accent-600,#dd2b0f)">להתחיל את השם שלי</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="gallery" style="border-bottom:2px solid var(--color-text,#201e1d)">
+    <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px; padding:72px 24px 40px">
+      <div>
+        <span style="display:block; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--color-accent,#ec3013); margin-bottom:18px">The Wall</span>
+        <h2 style="margin:0; font-size:clamp(32px,5vw,68px); line-height:1.02; font-weight:900; letter-spacing:-.03em">תכשיטים שיצאו<br>מהשולחן הזה</h2>
+      </div>
+      <p style="margin:0; max-width:34ch; font-size:16px; line-height:1.65; font-weight:300; color:#444141">כל פריט נעשה פעם אחת, לאדם אחד.&nbsp;</p>
+    </div>
+    <div data-wall="1" style="border-bottom:2px solid var(--color-text,#201e1d)">
+      <div data-row="0" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); border-top:2px solid var(--color-text,#201e1d); transition:opacity .6s ease">
+        <figure data-piece="1" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_ariel.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">תליון ״אריאל״</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">זהב 14 ק׳ · כתב יד</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪2,400</span>
+          </figcaption>
+        </figure>
+        <figure data-piece="2" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_021.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">טבעת שמות קלאסית</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">כסף 925 · ניסור ידני</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪1,850</span>
+          </figcaption>
+        </figure>
+        <figure data-piece="3" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_noa.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">תליון ״נועה״ · טיפה</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">זהב 14 ק׳</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪2,100</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-row="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); border-top:2px solid var(--color-text,#201e1d); transition:opacity .6s ease">
+        <figure data-piece="4" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_47_1.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">צמיד אותיות</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">זהב 18 ק׳ · שבע אותיות</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪3,200</span>
+          </figcaption>
+        </figure>
+        <figure data-piece="5" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_img_2769ds_1_1.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">תליון שם משולב</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">זהב לבן וצהוב</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪2,750</span>
+          </figcaption>
+        </figure>
+        <figure data-piece="6" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_max018.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">חותם בעבודת יד</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">זהב 18 ק׳ · חריטה</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪4,100</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div data-row="2" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); border-top:2px solid var(--color-text,#201e1d); transition:opacity .6s ease">
+        <figure data-piece="7" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_img_2712ds362.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">תליון תאריך</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">כסף 925</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪1,950</span>
+          </figcaption>
+        </figure>
+        <figure data-piece="8" style="margin:0; display:flex; flex-direction:column; opacity:.16; transform:translateY(30px); transition:opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <div class="grayscale" style="aspect-ratio:4/5; background:url('https://www.nisani.com/f-users/user_100650/website_100648/images/thumbs/W_960_103.jpg') center/cover no-repeat, repeating-linear-gradient(115deg,var(--color-surface,#eae9e9) 0 14px,#e2e0e0 14px 28px)"></div>
+          <figcaption style="display:flex; flex-direction:column; gap:6px; padding:18px 20px 24px">
+            <span style="font-size:16px; font-weight:700">טבעת נישואין חרוטה</span>
+            <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.14em; color:#605d5d">זהב 14 ק׳ · זוג</span>
+            <span data-price="1" style="font-family:'Archivo',sans-serif; font-size:13px; color:var(--color-text,#201e1d); margin-top:4px">₪2,600</span>
+          </figcaption>
+        </figure>
+        <div style="display:flex; align-items:flex-end; padding:24px 20px; border-left:2px solid var(--color-divider,rgba(32,30,29,.4)); background:var(--color-accent,#ec3013)">
+          <p style="margin:0; font-size:clamp(20px,2.4vw,30px); line-height:1.1; font-weight:900; letter-spacing:-.02em; color:var(--color-bg,#f3f2f2)">כל אחד מהם<br>נעשה פעם אחת.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--color-accent,#ec3013); border-bottom:2px solid var(--color-text,#201e1d); padding:clamp(48px,7vw,104px) 24px">
+    <p style="margin:0; max-width:24ch; font-size:clamp(30px,5.6vw,76px); line-height:1.02; font-weight:900; letter-spacing:-.035em; color:var(--color-bg,#f3f2f2)">שם אחד.<br>יד אחת.<br>פעם אחת.</p>
+  </section>
+
+  <section id="consult" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); border-bottom:2px solid var(--color-text,#201e1d)">
+    <div style="padding:clamp(40px,5vw,80px) 24px; border-left:2px solid var(--color-divider,rgba(32,30,29,.4))">
+      <span style="display:block; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--color-accent,#ec3013); margin-bottom:18px">Design Consultation</span>
+      <h2 style="margin:0 0 20px; font-size:clamp(28px,4vw,52px); line-height:1.04; font-weight:900; letter-spacing:-.03em">בוא נתחיל<br>מהקו הראשון</h2>
+      <p style="margin:0 0 32px; max-width:40ch; font-size:17px; line-height:1.7; font-weight:300; color:#2d2b2b">השאר פרטים ואחזור אליך תוך יום עבודה. הייעוץ הראשון — סקיצה ותמחור — הוא ללא עלות וללא התחייבות.</p>
+      <dl style="margin:0; display:grid; gap:2px">
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-top:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <dt style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#605d5d">STUDIO</dt>
+          <dd style="margin:0; font-size:15px">בתיאום מראש בלבד</dd>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-top:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <dt style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#605d5d">LEAD TIME</dt>
+          <dd style="margin:0; font-size:15px">2–6 שבועות</dd>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-top:2px solid var(--color-divider,rgba(32,30,29,.4)); border-bottom:2px solid var(--color-divider,rgba(32,30,29,.4))">
+          <dt style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#605d5d">MATERIALS</dt>
+          <dd style="margin:0; font-size:15px">זהב 14/18 ק׳, כסף 925</dd>
+        </div>
+      </dl>
+    </div>
+    <form data-form="1" onSubmit="{{ onSubmit }}" style="padding:clamp(40px,5vw,80px) 24px; display:grid; gap:24px; align-content:start; background:var(--color-surface,#eae9e9)">
+      <label style="display:grid; gap:8px">
+        <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#444141">שם מלא</span>
+        <input name="name" required="" style="padding:12px 0; font-size:16px; background:transparent; border:none; border-bottom:2px solid var(--color-text,#201e1d); color:var(--color-text,#201e1d)">
+      </label>
+      <label style="display:grid; gap:8px">
+        <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#444141">טלפון / וואטסאפ</span>
+        <input name="phone" type="tel" required="" dir="ltr" style="padding:12px 0; font-size:16px; background:transparent; border:none; border-bottom:2px solid var(--color-text,#201e1d); color:var(--color-text,#201e1d); text-align:right">
+      </label>
+      <label style="display:grid; gap:8px">
+        <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#444141">השם שייחרט</span>
+        <input name="engraving" style="padding:12px 0; font-size:16px; background:transparent; border:none; border-bottom:2px solid var(--color-text,#201e1d); color:var(--color-text,#201e1d)">
+      </label>
+      <label style="display:grid; gap:8px">
+        <span style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.16em; color:#444141">מה בראש שלך?</span>
+        <textarea name="note" rows="3" style="padding:12px 0; font-size:16px; line-height:1.6; background:transparent; border:none; border-bottom:2px solid var(--color-text,#201e1d); color:var(--color-text,#201e1d); resize:vertical"></textarea>
+      </label>
+      <button type="submit" style="justify-self:start; padding:18px 34px; background:var(--color-accent,#ec3013); color:var(--color-bg,#f3f2f2); border:none; font-size:15px; font-weight:700; cursor:pointer" style-hover="background:var(--color-accent-600,#dd2b0f)">שליחת פנייה</button>
+      <p data-sent="1" style="margin:0; display:none; font-size:15px; font-weight:700; color:#ae1800">תודה — הפנייה נשמרה. אחזור אליך תוך יום עבודה.</p>
+    </form>
+  </section>
+
+  <footer style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; padding:40px 24px; font-size:13px; color:#605d5d">
+    <span>ניסני · צורף ומעצב תכשיטים</span>
+    <span style="font-family:'Archivo',sans-serif; letter-spacing:.14em">NISANI.COM · HANDMADE IN ISRAEL</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;גלריה&quot;},&quot;galleryPerRow&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;three&quot;,&quot;one&quot;],&quot;default&quot;:&quot;three&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;גלריה&quot;},&quot;showChapterIndex&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;הסטודיו&quot;},&quot;stageMedia&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;stripes&quot;,&quot;quiet&quot;],&quot;default&quot;:&quot;stripes&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;הסטודיו&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+    const chips = Array.from(root.querySelectorAll('[data-chip]'));
+    const stages = Array.from(root.querySelectorAll('[data-stage]'));
+    const setActive = (i) => chips.forEach((c, n) => {
+      c.style.color = n === i ? 'var(--color-bg,#f3f2f2)' : '#7d7979';
+      c.style.background = n === i ? 'var(--color-text,#201e1d)' : 'transparent';
+    });
+    if (stages.length && 'IntersectionObserver' in window) {
+      this._io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(Number(e.target.dataset.stage));
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      stages.forEach((s) => this._io.observe(s));
+    }
+    setActive(0);
+    this.setupScrolly(root);
+    this.setupMotion(root);
+    const figs = Array.from(root.querySelectorAll('[data-piece]'));
+    const rows = Array.from(root.querySelectorAll('[data-row]'));
+    if (figs.length && 'IntersectionObserver' in window) {
+      const reveal = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const row = e.target.closest('[data-row]');
+          const peers = row ? Array.from(row.querySelectorAll('[data-piece]')) : [e.target];
+          peers.forEach((f, i) => setTimeout(() => {
+            f.style.opacity = '1';
+            f.style.transform = 'translateY(0)';
+          }, i * 110));
+          reveal.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -18% 0px', threshold: 0.2 });
+      figs.forEach((f) => reveal.observe(f));
+
+      this._focus = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          e.target.style.opacity = e.isIntersecting ? '1' : '.78';
+        });
+      }, { rootMargin: '-28% 0px -28% 0px' });
+      rows.forEach((r) => this._focus.observe(r));
+    } else {
+      figs.forEach((f) => { f.style.opacity = '1'; f.style.transform = 'none'; });
+    }
+    root.querySelectorAll('video').forEach((v) => {
+      v.muted = true; v.defaultMuted = true; v.volume = 0; v.loop = true; v.playsInline = true;
+      v.addEventListener('volumechange', () => { if (!v.muted) { v.muted = true; v.volume = 0; } });
+      if (v.dataset.scrollyVideo) return;
+      const p = v.play(); if (p && p.catch) p.catch(() => {});
+    });
+    this.applyProps();
+  }
+  setupScrolly(root) {
+    const wrap = root.querySelector('[data-scrolly]');
+    const media = root.querySelector('[data-scrolly-media]');
+    const stepsBox = root.querySelector('[data-scrolly-steps]');
+    if (!wrap || !media || !stepsBox) return;
+    const steps = Array.from(stepsBox.querySelectorAll('[data-step]'));
+    const frames = Array.from(media.querySelectorAll('[data-frame]'));
+    const tool = media.querySelector('[data-scrolly-tool]');
+    const num = media.querySelector('[data-scrolly-num]');
+    const bar = media.querySelector('[data-scrolly-bar]');
+    const tools = steps.map((s) => {
+      const spans = s.querySelectorAll('span');
+      return spans.length ? spans[spans.length - 1].textContent : '';
+    });
+
+    this.layoutScrolly = () => {
+      const header = root.querySelector('header');
+      const idx = root.querySelector('[data-chapter-index]');
+      const idxOn = idx && idx.style.display !== 'none';
+      const top = Math.round((header ? header.offsetHeight : 62) + (idxOn ? idx.offsetHeight : 0));
+      const narrow = wrap.getBoundingClientRect().width < 900;
+      const mode = narrow ? 'narrow' : 'wide';
+      if (mode !== this._mode) {
+        this._mode = mode;
+        if (narrow) {
+          wrap.style.gridTemplateColumns = 'minmax(0,1fr)';
+          if (media.parentElement !== stepsBox) stepsBox.insertBefore(media, stepsBox.firstChild);
+          media.style.borderLeft = 'none';
+          media.style.borderBottom = '2px solid var(--color-text,#201e1d)';
+        } else {
+          wrap.style.gridTemplateColumns = 'minmax(0,1fr) minmax(0,1fr)';
+          if (media.parentElement !== wrap) wrap.insertBefore(media, stepsBox);
+          media.style.borderLeft = '2px solid var(--color-text,#201e1d)';
+          media.style.borderBottom = 'none';
+        }
+      }
+      media.style.top = top + 'px';
+      media.style.height = narrow ? '46svh' : 'calc(100svh - ' + top + 'px)';
+      const h = narrow ? '70svh' : 'calc(100svh - ' + top + 'px)';
+      steps.forEach((s) => { s.style.minHeight = h; });
+    };
+    this.layoutScrolly();
+
+    let active = -1;
+    this._tick = () => {
+      const vh = window.innerHeight || 1;
+      const anchor = this._mode === 'narrow' ? vh * 0.74 : vh * 0.5;
+      let best = 0, bestD = Infinity;
+      steps.forEach((s, i) => {
+        const r = s.getBoundingClientRect();
+        const d = Math.abs(r.top + r.height / 2 - anchor);
+        if (d < bestD) { bestD = d; best = i; }
+      });
+      const wr = wrap.getBoundingClientRect();
+      const prog = Math.max(0, Math.min(1, (anchor - wr.top) / Math.max(1, wr.height)));
+      if (bar) bar.style.height = (prog * 100).toFixed(1) + '%';
+      if (best === active) return;
+      active = best;
+      frames.forEach((f, i) => {
+        const on = i === best;
+        f.style.opacity = on ? '1' : '0';
+        f.style.transform = on ? 'scale(1)' : 'scale(1.07)';
+        const v = f.querySelector('video');
+        if (!v) return;
+        if (on) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+        else v.pause();
+      });
+      if (tool) tool.textContent = tools[best] || '';
+      if (num) num.textContent = String(best + 1).padStart(2, '0');
+    };
+    this._tick();
+    let raf = 0;
+    this._onScrolly = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; this._tick(); }); };
+    this._onResize = () => { this.layoutScrolly(); this._tick(); };
+    window.addEventListener('scroll', this._onScrolly, { passive: true });
+    window.addEventListener('resize', this._onResize, { passive: true });
+  }
+  setupMotion(root) {
+    const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) return;
+    const ease = 'cubic-bezier(.16,.84,.3,1)';
+
+    // --- text: lines rise into place, staggered per block ---
+    const cand = Array.from(root.querySelectorAll('section h1, section h2, section h3, section p, section span, section form, section figcaption, section a[href^="#"]'))
+      .filter((el) => !el.closest('header') && !el.closest('[data-chapter-index]') && !el.closest('[data-video-slot]'));
+    const set = new Set(cand);
+    const items = cand.filter((el) => {
+      let p = el.parentElement;
+      while (p && p !== root) { if (set.has(p)) return false; p = p.parentElement; }
+      return true;
+    });
+    const seen = new Map();
+    items.forEach((el) => {
+      const key = el.parentElement;
+      const i = seen.get(key) || 0;
+      seen.set(key, i + 1);
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity .9s ' + ease + ' ' + (i * 90) + 'ms, transform 1.1s ' + ease + ' ' + (i * 90) + 'ms';
+      el.style.willChange = 'opacity, transform';
+    });
+    this._rev = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      e.target.dataset.revealed = '1';
+      this._rev.unobserve(e.target);
+      setTimeout(() => { e.target.style.willChange = 'auto'; }, 1600);
+    }), { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    items.forEach((el) => this._rev.observe(el));
+    this._revItems = items;
+    this._show = (el) => {
+      if (el.dataset.revealed === '1') return;
+      el.dataset.revealed = '1';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+      if (this._rev) this._rev.unobserve(el);
+    };
+    this._sweep = (force) => {
+      const vh = window.innerHeight || 1;
+      this._revItems.forEach((el) => {
+        if (el.dataset.revealed === '1') return;
+        const r = el.getBoundingClientRect();
+        // force only catches what is on screen or already scrolled past
+        if (force ? r.top < vh : (r.top < vh * 0.95 && r.bottom > 0)) this._show(el);
+      });
+      (this._mediaItems || []).forEach((m) => {
+        if (m.dataset.revealed === '1' || m.dataset.opening === '1') return;
+        const r = m.getBoundingClientRect();
+        if (force ? r.top < vh : (r.top < vh * 0.92 && r.bottom > 0)) this._showMedia(m);
+      });
+    };
+    this._sweepTimer = setTimeout(() => this._sweep(false), 400);
+    this._safety = setTimeout(() => this._sweep(true), 9000);
+
+    // --- media: curtain opens while the frame zooms back to 1 ---
+    const media = Array.from(root.querySelectorAll('[data-video-slot], [data-piece] img'))
+      .filter((m) => m.dataset.videoSlot !== '1' && m.dataset.videoSlot !== '9' && !m.dataset.scrollyVideo);
+    media.forEach((m) => {
+      const host = m.parentElement;
+      if (!host) return;
+      host.style.overflow = 'hidden';
+      host.style.clipPath = 'inset(14% 0% 14% 0%)';
+      host.style.transition = 'clip-path 1.25s ' + ease;
+      m.style.transform = 'scale(1.2)';
+      m.style.transition = 'transform 1.7s ' + ease;
+      m.style.willChange = 'transform';
+    });
+    this._mediaItems = media;
+    this._showMedia = (m) => {
+      if (m.dataset.revealed === '1' || m.dataset.opening === '1') return;
+      m.dataset.opening = '1';
+      const host = m.parentElement;
+      if (host) host.style.clipPath = 'inset(0% 0% 0% 0%)';
+      m.style.transform = 'scale(1)';
+      if (this._media) this._media.unobserve(m);
+      setTimeout(() => { m.style.transition = 'transform .5s linear'; m.dataset.revealed = '1'; }, 1750);
+    };
+    this._media = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) this._showMedia(e.target);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.15 });
+    media.forEach((m) => this._media.observe(m));
+
+    // --- continuous drift: slow parallax inside the frame while scrolling ---
+    let raf = 0;
+    const drift = () => {
+      raf = 0;
+      const vh = window.innerHeight || 1;
+      if (this._sweep) this._sweep(false);
+      media.forEach((m) => {
+        if (m.dataset.revealed !== '1') return;
+        const r = m.getBoundingClientRect();
+        if (r.bottom < -80 || r.top > vh + 80) return;
+        const p = (r.top + r.height / 2 - vh / 2) / vh; // -1 … 1
+        m.style.transform = 'scale(1.06) translateY(' + (p * -2.4).toFixed(2) + '%)';
+      });
+    };
+    this._onScroll = () => { if (!raf) raf = requestAnimationFrame(drift); };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+  }
+  componentDidUpdate() { this.applyProps(); if (this._sweep) this._sweep(false); }
+  componentWillUnmount() {
+    [this._io, this._focus, this._rev, this._media].forEach((o) => { if (o) o.disconnect(); });
+    clearTimeout(this._sweepTimer); clearTimeout(this._safety);
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    if (this._onScrolly) window.removeEventListener('scroll', this._onScrolly);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+  }
+  applyProps() {
+    const root = this.el || document;
+    const showPrices = this.props.showPrices ?? true;
+    root.querySelectorAll('[data-price]').forEach((n) => { n.style.display = showPrices ? '' : 'none'; });
+    const per = this.props.galleryPerRow ?? 'three';
+    root.querySelectorAll('[data-row]').forEach((r) => {
+      r.style.gridTemplateColumns = per === 'one'
+        ? '1fr'
+        : 'repeat(auto-fit,minmax(min(100%,280px),1fr))';
+    });
+    const idx = root.querySelector('[data-chapter-index]');
+    if (idx) idx.style.display = (this.props.showChapterIndex ?? true) ? 'flex' : 'none';
+    const grain = this.props.stageMedia ?? 'stripes';
+    root.querySelectorAll('[data-video-slot]').forEach((n) => {
+      if (n.dataset.scrollyVideo) return;
+      n.style.opacity = grain === 'quiet' ? '0.65' : '1';
+    });
+    if (this.layoutScrolly) { this.layoutScrolly(); if (this._tick) this._tick(); }
+  }
+  renderVals() {
+    return {
+      yes: true,
+      videoRef: (v) => {
+        if (!v || v._nis) return;
+        v._nis = true;
+        v.muted = true; v.defaultMuted = true; v.volume = 0;
+        v.setAttribute('muted', '');
+        v.addEventListener('volumechange', () => { if (!v.muted) { v.muted = true; v.volume = 0; } });
+        if (v.dataset.scrollyVideo) { v.loop = true; return; }
+        const kick = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+        v.addEventListener('loadeddata', () => { if (v.paused && v.currentTime === 0) v.currentTime = 0.05; });
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver((es) => es.forEach((e) => {
+            if (e.isIntersecting) kick(); else v.pause();
+          }), { rootMargin: '400px' }).observe(v);
+        }
+        kick();
+      },
+      onSubmit: (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const msg = form.querySelector('[data-sent]');
+        if (msg) msg.style.display = 'block';
+        form.querySelectorAll('input, textarea').forEach((f) => { f.value = ''; });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
